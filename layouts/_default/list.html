@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<main id="main" class="w-full mx-auto">
+  <h1 class="text-6xl border-b-2 mb-6">{{ with .Site.GetPage "section" .Section }}{{ .Title }}{{ end }}</h1>
+  <div class="text-2xl italic">
+    {{.Description}}
+  </div>
+  <div class="prose prose-2xl mb-10">
+    {{.Content}}
+  </div>
+
+
+    {{- partial "library.html" . }}
+  
+</main>
+
+{{ end }}
