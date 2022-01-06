@@ -1,10 +1,15 @@
-<section>
-  <h1 class="text-4xl border-b mb-10">Innlegg</h1>
-  <ul class="leading-loose list-none pl-0 text-2xl">
-    {{ range (.Paginate ( where .Site.Pages "Section" .Type ).ByDate).Pages }}
-      {{ if ne .Kind "section" }}
-        {{.Title}}
-      {{ end }}
+<section class="2xl:w-3/4 lg:w-5/6 11/12 mx-auto">
+  <div class="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+    {{ range (union .Sections .RegularPages)  }}
+    {{ if (or .IsSection .IsPage) }} <!-- is this conditional needed -->
+    <a href="{{.Permalink}}">
+      <div class="border h-96 shadow-lg rounded rounded-r-2xl rounded text-4xl mx-4 my-2 md:m-4 lg:m-6 pattern-{{.Params.params.pattern}}">
+        <div class="p-5 mt-24 mx-10 rounded text-center border border-gray-400 text-black bg-white">
+          {{.Title}}
+        </div>
+      </div>
+    </a>
     {{ end }}
-  </ul>
+    {{ end }}
+  </div>
 </section>

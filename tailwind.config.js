@@ -7,7 +7,6 @@ module.exports = {
     },
     extend: {},
   },
-  safelist: ['bg-yellow-100', 'text-indigo-800'],
   plugins: [
     require('@tailwindcss/typography')
   ],

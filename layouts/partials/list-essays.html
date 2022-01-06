@@ -1,0 +1,9 @@
+<section class="w-2/4 mx-auto">
+  <ul class="leading-loose list-none pl-0 text-2xl">
+    {{ range (union .Sections .RegularPages) }}
+      {{ if (or .IsSection .IsPage) }} <!-- is this conditional needed -->
+      {{- partial "essay-item.html" . (dict "no_tags" true) }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>

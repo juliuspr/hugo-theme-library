@@ -1,29 +1,11 @@
 {{ define "main" }}
-  <div class="w-full mb-10 mx-auto md:grid md:grid-cols-2"> <!-- featured grid start -->
-   {{range (.Paginate ( where .Site.Pages "Params.featured" "=" true ).ByDate).Pages }}
-    {{.Title}}
-   {{end}}
- </div> <!-- featured grid end -->
+<header class="mt-16 mb-12">
+  <h1 class="mb-6 text-6xl lg:text-8xl font-bold text-center ">{{.Site.Title}}</h1>
+  <div class="text-center">by <a href="https://juliuspranevicius.com" class="underline">Julius Pranevičius</a></div>
+</header>
 
-<main id="main" class="w-full mx-auto">
-  <h1 class="mb-6 text-6xl lg:text-8xl font-bold text-center">On Hornplaying</h1>
-  <section>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2">
-      {{ range (where site.Pages "Type" "in" site.Params.mainSections).ByDate.Reverse }}
-        {{ if ne .Kind "section" }}
-          <div class="border shadow rounded-md text-4xl m-6">
-            <div class="picture h-72  {{.Params.params.pattern}} {{.Params.params.pattern_color}} {{.Params.params.pattern_bg}}" >
-            </div>
-            <div class="title p-4 text-center border-t">
-                {{.Title}}
-            </div>
-
-          </div>
-
-        {{ end }}
-      {{ end }}
-    </div>
-  </section>
+<main id="main">
+  {{ partial "library.html" . }}
 </main>
 
 {{ end }}
