@@ -1,0 +1,14 @@
+<section class="w-4/5 mx-auto">
+  <div class="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+  {{ range (union .Sections .RegularPages) }}
+    <div class="inline mt-4">
+      <a class="hover:text-indigo-700 text-4xl leading-loose underline decoration-1 underline-offset-4 decoration-indigo-400" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>{{ partial "is-draft.html" . }}
+      <ul class="list-none indent-5">
+      {{range (union .Sections .RegularPages)}}
+        <li><a href="{{.Permalink}}" class=" text-2xl leading-relaxed underline decoration-1 underline-offset-4 decoration-wavy decoration-indigo-400">{{.Title}}</a></li>
+      {{end}}
+      </ul>
+    </div>
+  {{ end }}
+  </div>
+</section>
