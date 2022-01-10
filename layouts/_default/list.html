@@ -1,11 +1,8 @@
 {{ define "main" }}
 
-<header class="mx-auto mt-12 mb-12 w-2/3">
-  <h1 class="mb-6 text-5xl md:text-6xl lg:text-8xl font-bold text-center leading-[3rem]">{{ .Title }}</h1>
-  <div class="text-center">
-    {{ partial "breadcrumbs.html" . }}
-  </div>
-</header>
+<div class="mb-12 text-center">
+  {{ partial "breadcrumbs.html" . }}
+</div>
 
 
 <main id="main">
@@ -22,14 +19,12 @@
     {{- partial "list-essays.html" . }}
   {{ else if (eq .Params.view "strategy-overview")}}
     {{- partial "strategy-overview.html" . }}
+  {{ else if (eq .Params.view "simple-list")}}
+    {{- partial "simple-list.html" . }}
+  {{ else if (eq .Params.view "translations")}}
+    {{- partial "translations.html" . }}
   {{else}}
     {{- partial "library.html" . }}
   {{end}}
-
-
-
 </main>
-
-
-
 {{ end }}

@@ -1,0 +1,60 @@
+<section class="w-3/4 lg:w-2/3 mx-auto  ">
+  {{.Pages.Prev .}} {{with .Pages.Next . }}{{.Permalink}}{{end}}
+
+
+  {{ $english := index .Pages 0 }}
+  {{ $french := index .Pages 1 }}
+
+  {{ $rawFrench := split $french.RawContent "\n\n" }}
+
+  {{ with $english }}
+    <div class="translation-paragraphs grid md:grid-cols-2 gap-8 text-xl">
+    {{range $index, $element := split .RawContent "\n\n"}}
+      <!-- <p class="col-span-2">{{$index}}</p> -->
+      <p class="my-4 leading-relaxed">{{$element}}</p>
+      <span class="my-4 leading-relaxed text-stone-200 hover:text-gray-900 hidden md:block">{{ index $rawFrench $index }}</span>
+    {{end}}
+    </div>
+  {{end}}
+
+
+  <!-- <div class="grid grid-cols-1">
+    {{range .Pages}}
+      <hr>
+      {{len (split .RawContent "\n")}}
+      <hr>
+      {{range $index, $element := split .RawContent "\n\n"}}
+        <p>{{$index}}: {{$element}}</p>
+      {{end}}
+      <hr>
+      {{ $class := "" }}
+
+      {{ if (eq .Params.lang "en")}}
+        {{ $class := "peer"}}
+      {{ else }}
+        {{ $class := "invisible peer-hover:visible"}}
+      {{ end }}
+
+      <div class="{{$class}} p-8">
+        <div class="text-4xl text-center mb-6">{{ .Title }}</div>
+        <div>{{ .Content }}</div>
+        {{ range $index, $element := split .Content "</p>" }}
+                {{ $element | safeHTML }}</p>
+                {{ if eq $index 0 }}
+                    THE TEXT/CODE YOU WANT TO SHOW HERE (OR A PARTIAL)
+                {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div> -->
+
+<!-- <div class="flex">
+  <div class="peer">English 1</div>
+  <div class="invisible peer-hover:visible peer-active:visible">French 1</div>
+</div>
+<div>
+  <div class="peer">English 2</div>
+  <div class="invisible peer-hover:visible">French 2</div>
+</div> -->
+
+</section>

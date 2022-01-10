@@ -1,0 +1,8 @@
+
+{{if (eq (.Get 0) "fr") }}
+  {{ .Scratch.Set "classes" "invisible peer-hover:visible"}}
+{{else}}
+  {{ .Scratch.Set "classes" "peer"}}
+{{ end }}
+
+<p class="{{.Scratch.Get "classes"}}">{{.Inner}}</p>

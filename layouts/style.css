@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 /* safelist: ['bg-yellow-100', 'text-indigo-800', 'bg-indigo-900', 'bg-red-500', 'text-white'], */
+div {
+  counter-reset: paragraph;
+}
+.translation-paragraphs > p:before {
+    @apply text-gray-300;
+    position: absolute;
+    margin-left: -20px;
+
+    content: counter(paragraph);
+    counter-increment: paragraph;
+}
+
 .pattern-1 {
   @apply bg-yellow-100 text-indigo-900;
   background-size: 50px 50px;

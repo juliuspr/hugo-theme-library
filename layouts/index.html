@@ -1,11 +1,8 @@
 {{ define "main" }}
-<header class="mt-16 mb-12">
-  <h1 class="mb-6 text-6xl lg:text-8xl font-bold text-center ">{{.Site.Title}}</h1>
-  <div class="text-center">by <a href="https://juliuspranevicius.com" class="underline">Julius Pranevičius</a></div>
-</header>
+<div class="mb-12 text-center">by <a href="https://juliuspranevicius.com" class="underline">Julius Pranevičius</a></div>
 
 <main id="main">
-  {{ partial "library.html" . }}
+  {{ partial "strategy-overview.html" . }}
 </main>
 
 {{ end }}
