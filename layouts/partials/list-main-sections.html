@@ -1,0 +1,18 @@
+<section class="w-3/4 mx-auto grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 my-32">
+  {{ range .Pages }}
+    {{$link := ""}}
+    {{ if .Page.Params.externalLink }}
+      {{ $link = .Page.Params.externalLink }}
+    {{ else }}
+      {{ $link = .RelPermalink }}
+    {{end}}
+
+    <a href="{{ $link }}" class="h-full">
+    <div class=" p-8 text-center bg-neutral-50 h-full border shadow rounded text-3xl my-auto">
+      {{ .LinkTitle }}
+    </div>
+    </a>
+
+
+  {{ end }}
+</section>
