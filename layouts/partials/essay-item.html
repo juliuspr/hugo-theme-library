@@ -2,7 +2,7 @@
   <!-- {{if (.Scratch.Get "show_date")}} show date {{else}} no date {{end}} for some reason .Scratch.Get doesn't work... -->
   <!-- {{if (.Scratch.Get "show_tags")}} show tags {{else}} no tags {{end}} -->
 
-  <a class="truncate hover:text-indigo-700 underline decoration-1 underline-offset-4 decoration-wavy decoration-indigo-400" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>{{ partial "is-draft.html" . }}
+  <a class="truncate hover:text-indigo-700 underline decoration-1 underline-offset-4 decoration-wavy decoration-indigo-400" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>{{ partial "is-draft.html" . }}
   {{ if or (.Scratch.Get "show_tags") (.Scratch.Get "show_date") }}
     <hr class="my-0 mx-2 h-1 border-0 border-b border-dotted border-indigo-200 flex-[1_0_1rem]">
   {{ end }}

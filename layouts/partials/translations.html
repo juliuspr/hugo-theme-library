@@ -1,5 +1,5 @@
 <section class="w-3/4 lg:w-2/3 mx-auto  ">
-  {{.Pages.Prev .}} {{with .Pages.Next . }}{{.Permalink}}{{end}}
+  {{.Pages.Prev .}} {{with .Pages.Next . }}{{.RelPermalink}}{{end}}
 
 
   {{ $english := index .Pages 0 }}

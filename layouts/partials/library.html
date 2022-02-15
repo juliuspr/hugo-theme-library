@@ -2,7 +2,7 @@
   <div class="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
     {{ range (union .Sections .RegularPages)  }}
     {{ if (or .IsSection .IsPage) }} <!-- is this conditional needed -->
-    <a href="{{.Permalink}}" class="  md:mx-auto mb-6 mx-4">
+    <a href="{{.RelPermalink}}" class="  md:mx-auto mb-6 mx-4">
       <div class="border md:max-w-xs lg:max-w-sm md:min-w-xs lg:min-w-sm h-56 md:h-96 shadow-lg rounded md:rounded-r-2xl rounded text-4xl md:m-4 lg:m-6 pattern-{{.Params.params.pattern}}">
         <div class="p-5 mt-16 md:mt-24 mx-10 rounded text-center border border-gray-400 text-black bg-white">
           {{.LinkTitle}}
