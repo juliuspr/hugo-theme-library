@@ -1367,6 +1367,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Cormorant Garamond, ui-serif, Georgia, Cambria, Times New Roman, Times;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
