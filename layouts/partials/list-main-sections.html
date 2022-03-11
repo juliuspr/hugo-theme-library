@@ -13,6 +13,7 @@
         <!-- <div class=" p-8 text-center bg-neutral-50 h-full border shadow rounded text-3xl my-auto"> -->
           {{ .LinkTitle }}
         </a>
+        {{- partial "is-draft.html" . }}
       </li>
     {{ end }}
   </ul>

@@ -14,5 +14,10 @@
     <div class="prose prose-2xl">
       {{ .Content }}
     </div>
+    <div>
+      {{with .Site.RegularPages.Next .}}
+        {{.Title}}
+      {{end}}
+    </div>
   </main>
 {{ end }}
