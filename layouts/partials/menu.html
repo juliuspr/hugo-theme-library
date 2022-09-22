@@ -1,7 +1,9 @@
 <div class="text-2xl font-bold leading-10 md:mb-6"><a href="/">{{.Site.Title}}</a></div>
+
 {{- $currentPage := . }}
 <ul id="menu" class="text-md">
-    {{- range .Site.Menus.main }}
+    {{- range .Menus.main }}
+    fdjk
     {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
     {{- $page_url:= $currentPage.Permalink | absLangURL }}
     {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
