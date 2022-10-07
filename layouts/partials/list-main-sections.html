@@ -7,7 +7,8 @@
   {{ end }}
 
   <ul class="list-none ">
-    {{ range .Pages }}
+
+    {{ range where .Pages ".RelPermalink" "!=" "/teaching-materials/"  }}
       {{$link := ""}}
       {{ if .Page.Params.externalLink }}
         {{ $link = .Page.Params.externalLink }}
