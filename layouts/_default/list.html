@@ -12,8 +12,6 @@
 
     {{- $pages := union .Parent.RegularPages .Parent.Sections }}
     {{- $paginator := .Paginate $pages }}
-    {{ $paginator }}
-    {{.Parent}}
     {{with .Site.RegularPages.Next . }}{{.RelPermalink}}{{end}}
     {{- if gt $paginator.TotalPages 1 }}
 
