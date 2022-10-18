@@ -1160,6 +1160,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1244,6 +1254,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 75%;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -1266,6 +1280,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.items-center {
+  align-items: center;
 }
 
 .items-baseline {
@@ -1339,6 +1361,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -1359,9 +1386,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pb-0\.5 {
@@ -1698,16 +1744,12 @@ div {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:w-3\/4 {
-    width: 75%;
-  }
-
   .\32xl\:w-3\/5 {
     width: 60%;
   }
 
-  .\32xl\:w-2\/3 {
-    width: 66.666667%;
+  .\32xl\:w-3\/4 {
+    width: 75%;
   }
 
   .\32xl\:grid-cols-4 {

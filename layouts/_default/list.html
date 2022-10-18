@@ -40,6 +40,8 @@
     {{- partial "simple-list.html" . }}
   {{ else if (eq .Params.view "translations")}}
     {{- partial "translations.html" . }}
+  {{ else if (eq .Params.view "list-exercises")}}
+    {{- partial "list-exercises.html" . }}
   {{else}}
     {{- partial "library.html" . }}
   {{end}}
