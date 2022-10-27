@@ -42,6 +42,8 @@
     {{- partial "translations.html" . }}
   {{ else if (eq .Params.view "list-exercises")}}
     {{- partial "list-exercises.html" . }}
+  {{ else if (eq .Params.view "exercise-compendium")}}
+    {{- partial "exercise-compendium.html" . }}
   {{else}}
     {{- partial "library.html" . }}
   {{end}}
