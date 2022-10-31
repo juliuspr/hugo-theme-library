@@ -44,6 +44,8 @@
     {{- partial "list-exercises.html" . }}
   {{ else if (eq .Params.view "exercise-compendium")}}
     {{- partial "exercise-compendium.html" . }}
+  {{ else if (eq .Params.view "producing-sounds")}}
+    {{- partial "producing-sounds.html" . }}
   {{else}}
     {{- partial "library.html" . }}
   {{end}}
