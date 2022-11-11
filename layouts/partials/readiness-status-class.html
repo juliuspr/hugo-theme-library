@@ -1,0 +1,10 @@
+{{if (eq .status "in-progress") }}
+  decoration-gray-300
+  text-gray-500
+{{else if (eq .status "done") }}
+  text-black
+  decoration-green-600
+{{else if (eq .status "not-started") }}
+  decoration-slate-100
+  text-slate-300
+{{end}}
