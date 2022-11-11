@@ -1508,39 +1508,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(217 119 6 / var(--tw-text-opacity));
 }
 
-.text-stone-200 {
-  --tw-text-opacity: 1;
-  color: rgb(231 229 228 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-zinc-300 {
-  --tw-text-opacity: 1;
-  color: rgb(212 212 216 / var(--tw-text-opacity));
 }
 
 .text-slate-300 {
@@ -1548,9 +1518,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
-.text-slate-100 {
+.text-stone-200 {
   --tw-text-opacity: 1;
-  color: rgb(241 245 249 / var(--tw-text-opacity));
+  color: rgb(231 229 228 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1563,34 +1533,9 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-color: #818cf8;
 }
 
-.decoration-orange-400 {
-  -webkit-text-decoration-color: #fb923c;
-          text-decoration-color: #fb923c;
-}
-
 .decoration-gray-400 {
   -webkit-text-decoration-color: #9ca3af;
           text-decoration-color: #9ca3af;
-}
-
-.decoration-black {
-  -webkit-text-decoration-color: #000;
-          text-decoration-color: #000;
-}
-
-.decoration-indigo-800 {
-  -webkit-text-decoration-color: #3730a3;
-          text-decoration-color: #3730a3;
-}
-
-.decoration-gray-700 {
-  -webkit-text-decoration-color: #374151;
-          text-decoration-color: #374151;
-}
-
-.decoration-red-400 {
-  -webkit-text-decoration-color: #f87171;
-          text-decoration-color: #f87171;
 }
 
 .decoration-gray-300 {
@@ -1598,49 +1543,14 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-color: #d1d5db;
 }
 
-.decoration-zinc-300 {
-  -webkit-text-decoration-color: #d4d4d8;
-          text-decoration-color: #d4d4d8;
-}
-
-.decoration-slate-300 {
-  -webkit-text-decoration-color: #cbd5e1;
-          text-decoration-color: #cbd5e1;
-}
-
-.decoration-green-800 {
-  -webkit-text-decoration-color: #166534;
-          text-decoration-color: #166534;
-}
-
 .decoration-green-600 {
   -webkit-text-decoration-color: #16a34a;
           text-decoration-color: #16a34a;
 }
 
-.decoration-orange-300 {
-  -webkit-text-decoration-color: #fdba74;
-          text-decoration-color: #fdba74;
-}
-
-.decoration-orange-200 {
-  -webkit-text-decoration-color: #fed7aa;
-          text-decoration-color: #fed7aa;
-}
-
-.decoration-orange-100 {
-  -webkit-text-decoration-color: #ffedd5;
-          text-decoration-color: #ffedd5;
-}
-
 .decoration-slate-100 {
   -webkit-text-decoration-color: #f1f5f9;
           text-decoration-color: #f1f5f9;
-}
-
-.decoration-slate-900 {
-  -webkit-text-decoration-color: #0f172a;
-          text-decoration-color: #0f172a;
 }
 
 .decoration-wavy {
