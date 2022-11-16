@@ -9,7 +9,7 @@
   <ul class="leading-loose list-none text-2xl">
     {{ range (union .Sections .RegularPages) }}
       {{ if (or .IsSection .IsPage) }} <!-- is this conditional needed -->
-        <h1 class="text-5xl bold">{{.Title}}</h1>
+        <h1 class="text-5xl bold" id="{{ .Title | urlize}}">{{.Title}}</h1>
         <div class="text-xs">{{.Content}}</div>
         <div class="grid gap-3 2xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2">
         {{ range .Sections }}
