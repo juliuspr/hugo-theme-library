@@ -1,13 +1,22 @@
 module.exports = {
-  content: ["./layouts/**/*.{html,js}", "../../layouts/**/*.{html,js}"],
+  content: [
+    "./layouts/**/*.{html,js}",
+    "../../layouts/**/*.{html,js}",
+    ,
+    "./public/**/*.{html,js}",
+  ],
   theme: {
     fontFamily: {
-      'serif': ["Cormorant Garamond", 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times'],
-
+      serif: [
+        "Cormorant Garamond",
+        "ui-serif",
+        "Georgia",
+        "Cambria",
+        "Times New Roman",
+        "Times",
+      ],
     },
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/typography')
-  ],
-}
+  plugins: [require("@tailwindcss/typography")],
+};
