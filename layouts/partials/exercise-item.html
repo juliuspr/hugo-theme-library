@@ -1,6 +1,6 @@
-<li class="grid grid-cols-1 my-10 text-center text-lg">
-  <a class=" hover:text-indigo-700 underline decoration-1 underline-offset-4 decoration-indigo-200" href="{{ .RelPermalink }}" title="{{ .Title }}">
-    <div class="thumbnail col-span-2 px-1">
+<li class="grid grid-cols-1 my-4 text-lg text-center lg:my-6">
+  <a class="underline hover:text-indigo-700 decoration-1 underline-offset-4 decoration-indigo-200" href="{{ .RelPermalink }}" title="{{ .Title }}">
+    <div class="col-span-2 px-1 thumbnail">
       <img src="{{ .RelPermalink  }}thumbnail.png" alt="exercise thumbnail" class="" />
     </div>
     <div class="title" >
@@ -9,13 +9,13 @@
         <hr class="my-0 mx-2 h-1 border-0 border-b border-dotted border-indigo-200 flex-[1_0_1rem]">
       {{ end }}
       {{ if .Scratch.Get "show_tags" }}
-        <a class="text-neutral-500 truncate">
+        <a class="truncate text-neutral-500">
           {{range $key, $value := .Params.tags}} {{.}}{{ if ne $key (sub (len $.Params.tags) 1) }},{{ end }}{{end}}
         </a>&nbsp;&nbsp;
       {{ end }}
 
       {{ if .Scratch.Get "show_date" }}
-        <time class="g flex-initial tabular-nums whitespace-nowrap text-neutral-400 hidden md:block px-10" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006/01/02" .Date }}</time>
+        <time class="flex-initial hidden px-10 g tabular-nums whitespace-nowrap text-neutral-400 md:block" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006/01/02" .Date }}</time>
       {{ end }}
     </div>
   </a>
