@@ -1593,6 +1593,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.625;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
 .leading-10 {
   line-height: 2.5rem;
 }
@@ -1664,6 +1668,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .decoration-indigo-400 {
   -webkit-text-decoration-color: #818cf8;
           text-decoration-color: #818cf8;
+}
+
+.decoration-indigo-200 {
+  -webkit-text-decoration-color: #c7d2fe;
+          text-decoration-color: #c7d2fe;
 }
 
 .decoration-gray-400 {
