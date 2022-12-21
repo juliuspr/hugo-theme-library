@@ -1,7 +1,7 @@
 <li class="grid grid-cols-1 my-4 text-lg text-center lg:my-6">
   <a class="underline hover:text-indigo-700 decoration-1 underline-offset-4 decoration-indigo-200" href="{{ .RelPermalink }}" title="{{ .Title }}">
-    <div class="col-span-2 px-1 thumbnail">
-      <img src="{{ .RelPermalink  }}thumbnail.png" alt="exercise thumbnail" class="" />
+    <div class="col-span-2 px-1 thumbnail ">
+      <img src="{{ .RelPermalink  }}thumbnail.png" alt="exercise thumbnail" class="mx-auto" />
     </div>
     <div class="title" >
       {{ .LinkTitle | markdownify }}{{ partial "is-draft.html" . }}
