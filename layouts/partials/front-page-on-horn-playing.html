@@ -1,6 +1,6 @@
-<section class="w-4/5 2xl:w-3/5 mx-auto">
+<section class="w-4/5 mx-auto 2xl:w-3/5">
   {{ with .GetPage "introduction.md" }}
-    <p class="text-center bg-neutral-50 border shadow p-3">
+    <p class="p-3 text-center border shadow bg-neutral-50">
       <a href="{{ ref . "introduction.md" }}" class="text-2xl font-bold underline decoration-wavy decoration-1 underline-offset-4 decoration-indigo-400">{{.Title}}</a>
     </p>
   {{ end }}
@@ -8,13 +8,13 @@
   <div class="grid gap-5 lg:grid-cols-3 md:grid-cols-2">
     {{ range .Sections }}
       <div class="pattern-{{.Params.params.pattern}} inline mt-4 border rounded shadow-sm p-4 ">
-        <a class="bg-white text-black block mb-2 px-3 hover:text-indigo-700 text-2xl leading-loose underline decoration-1 underline-offset-4 decoration-indigo-400  border shadow" href="{{ .RelPermalink }}" title="{{ .Title }}">
+        <a class="block px-3 mb-2 text-2xl leading-loose text-black underline bg-white border shadow hover:text-indigo-700 decoration-1 underline-offset-4 decoration-indigo-400" href="{{ .RelPermalink }}" title="{{ .Title }}">
         	{{ .LinkTitle | markdownify }}
         </a>
         {{ partial "is-draft.html" . }}
-        <ul class="list-none indent-5 p-2 bg-white border shadow-sm">
+        <ul class="p-2 list-none bg-white border shadow-sm indent-5">
         {{range .Sections}}
-          <li><a href="{{.RelPermalink}}" class="text-black text-xl leading-normal underline decoration-1 underline-offset-4  decoration-indigo-200 truncate">{{.LinkTitle}}</a>{{ partial "is-draft.html" . }}</li>
+          <li><a href="{{.RelPermalink}}" class="text-xl leading-normal underline truncate  decoration-1 underline-offset-4 {{ partial "readiness-status-class.html" (dict "context" . "status" .Params.status) }}">{{.LinkTitle}}</a>{{ partial "is-draft.html" . }}</li>
         {{end}}
         </ul>
       </div>
